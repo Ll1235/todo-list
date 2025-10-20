@@ -1,4 +1,4 @@
-# 📝 Todo List App
+# 📝  Todo List App
 
 A modern task management application built with TypeScript and Tailwind CSS.
 
