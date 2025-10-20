@@ -42,7 +42,7 @@ tsc --watch
 
 4. **Build Tailwind CSS (in second terminal):**
 ```bash
-tailwindcss -i input.css -o output.css --watch
+tailwindcss -i ./src/input.css -o ./src/output.css --watch
 ```
 
 5. **Open index.html in your browser:**
