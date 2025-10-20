@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <title>ToDo</title>
+</head>
+
+<body class="font-mono">
+
+    <div class="bg-[linear-gradient(90deg,rgba(238,76,124,1)50%,rgba(154,23,80,1)100%)] min-h-screen w-full">
+        <div class="ml-auto mr-auto max-w-5xl">
+            <h1 class="text-center font-bold text-[#fcfcfc] pt-[50px] pb-[25px] 
+            text-[clamp(1.75rem,1.125rem+3.13vw,3.125rem)]">
+                ToDo List
+            </h1>
+
+            <div class="relative container-todo ml-auto mr-auto bg-[#fcfcfc] rounded-xl
+            shadow-[15px_8px_8px_0px_rgba(84,84,84,0.2)] pt-[40px] pb-[40px] container-padding-custom">
+                <div class="flex justify-between items-center">
+                    <input id="task" class="w-[79%] rounded-sm border-gray-400 border border-solid
+                    p-[5px] pl-[10px] font-mono text-[clamp(1rem,0.858rem+0.71vw,1.313rem)] 
+                    outline-[0px]" type="text" maxlength="30" placeholder="Add a new task">
+                    
+                    <button id="add" class="w-[19%] text-[clamp(1rem,0.858rem+0.71vw,1.313rem)] cursor-pointer
+                    pt-[5px] pb-[5px] rounded-sm bg-[linear-gradient(90deg,rgba(238,76,124,1)50%,rgba(154,23,80,1)100%)]
+                    text-[#fcfcfc]">Add</button>
+                </div>
+
+                <nav class="flex justify-between items-center pt-[20px]">
+                    <ul class="flex gap-custom">
+                        <li>
+                            <button id="all" class="relative responsive-text  
+                            custom-before cursor-pointer">
+                                All</button>
+                        </li>
+                        <li>
+                            <button id="pending" class="relative responsive-text cursor-pointer">
+                                Pending</button>
+                        </li>
+                        <li>
+                            <button id="complited" class="relative responsive-text cursor-pointer">
+                                Complited</button>
+                        </li>
+                    </ul>
+
+                    <button id="clear" class="responsive-text bg-[linear-gradient(90deg,rgba(238,76,124,1)50%,rgba(154,23,80,1)100%)]
+                    button-padding-custom rounded-sm text-[#fcfcfc] responsive-text
+                    cursor-pointer">
+                        Clear All
+                    </button>
+                </nav>
+
+                <div class="h-[40px] relative ">
+                    <div class="absolute top-[20px] left-0 right-0 w-full h-[1px] bg-gray-400"></div>
+                </div>
+
+                <ul id="task-list">
+                    <li class="task-item relative flex justify-between items-center pt-[10px] pb-[10px] custom-list">
+                        <div class="flex items-center gap-x-[10px]">
+                            <input type="checkbox" class="task-checkbox w-[17px] h-[17px] 
+                            accent-[#9A1750] shrink-0">
+                            <span>Text</span>
+                        </div>
+                        <button class="task-btn w-[25px] h-[25px] cursor-pointer shrink-0 ml-[10px]">
+                            <img src="images/delete-1-svgrepo-com.svg" alt="">
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>

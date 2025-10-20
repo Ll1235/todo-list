@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+
+@layer components {
+
+    .responsive-text {
+        font-size: clamp(0.875rem, 0.79rem + 0.43vw, 1.063rem);
+    }
+
+    .custom-before {
+        color: #9A1750;
+    }
+
+    #add:disabled {
+        opacity: 0.6;
+    }
+
+    .custom-before::before {
+        content: "";
+        position: absolute;
+        background-color: #9A1750;
+        left: 0;
+        right: 0;
+        width: 100%;
+        bottom: -2px;
+        height: 2px;
+    }
+
+    .complited {
+        @apply line-through;
+    }
+
+    .container-todo {
+        @apply w-[290px] min-h-[370px]
+    }
+
+    .gap-custom {
+        @apply gap-x-[7px];
+    }
+
+    .container-padding-custom {
+        @apply pr-[10px] pl-[10px];
+    }
+
+    .button-padding-custom {
+        @apply pt-[4px] pb-[4px] pl-[8px] pr-[8px];
+    }
+
+    .custom-list::before {
+        content: "";
+        position: absolute;
+        background-color: #acacac;
+        left: 0;
+        right: 0;
+        width: 100%;
+        bottom: -0px;
+        height: 1px;
+    }
+
+    @media (min-width: 400px) {
+        .container-todo {
+            @apply w-[350px] min-h-[400px];
+        }
+
+        .gap-custom {
+            @apply gap-x-[15px];
+        }
+
+        .container-padding-custom {
+            @apply pr-[20px] pl-[20px];
+        }
+
+        .button-padding-custom {
+            @apply pt-[8px] pb-[8px] pl-[16px] pr-[16px];
+        }
+    }
+
+    @media (min-width: 500px) {
+        .container-todo {
+            @apply w-[400px] min-h-[450px];
+        }
+
+        .gap-custom {
+            @apply gap-x-[20px];
+        }
+    }
+
+    @media (min-width: 600px) {
+        .container-todo {
+            @apply w-[450px] min-h-[500px];
+        }
+    }
+
+    @media (min-width: 700px) {
+        .container-todo {
+            @apply w-[500px] min-h-[600px];
+        }
+    }
+
+}
